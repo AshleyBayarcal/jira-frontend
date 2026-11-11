@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Jira Parent Ticket Table of Contents — Dark Mode</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #111318;
+            --surface: #1a1d24;
+            --surface-alt: #222733;
+            --border: #343b49;
+            --text: #e6e9ef;
+            --muted: #a4adbb;
+            --link: #9bbcff;
+            --link-hover: #c1d5ff;
+            --epic-bg: #202d43;
+            --epic-border: #5274a8;
+            --accent: #9bbcff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background: var(--bg);
+        }
+
+        body {
+            margin: 0;
+            padding: 32px;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.55;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 25px;
+            margin: 0 0 8px;
+            color: #f3f5f9;
+        }
+
+        .meta,
+        .note {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .note {
+            padding: 12px 15px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--accent);
+            border-radius: 7px;
+            margin: 18px 0 26px;
+        }
+
+        section {
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-size: 19px;
+            color: #f0f3f8;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 650px;
+        }
+
+        th,
+        td {
+            padding: 11px 13px;
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #252b36;
+            color: #cbd3df;
+            font-size: 12px;
+            letter-spacing: .03em;
+            text-transform: uppercase;
+        }
+
+        td {
+            background: var(--surface);
+            color: var(--text);
+            font-size: 14px;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: 0;
+        }
+
+        tbody tr:not(.epic-row):nth-child(even) td {
+            background: #1d222b;
+        }
+
+        tbody tr:hover td {
+            background: #283142;
+        }
+
+        .epic-row td {
+            background: var(--epic-bg);
+            font-weight: 600;
+            border-bottom: 1px solid var(--epic-border);
+        }
+
+        a {
+            color: var(--link);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+
+        .priority-major {
+            color: #ffca8a;
+        }
+
+        .priority-minor {
+            color: #c1c9d6;
+        }
+
+        .status {
+            color: #a9d7b4;
+        }
+
+        footer {
+            color: var(--muted);
+            font-size: 12px;
+            margin: 35px 0 10px;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 18px 12px;
+            }
+
+            h1 {
+                font-size: 21px;
+            }
+        }
+
+        @media print {
+            :root {
+                color-scheme: light;
+            }
+
+            body {
+                background: white;
+                color: black;
+                padding: 10mm;
+            }
+
+            h1,
+            h2,
+            td,
+            .meta,
+            .note,
+            footer {
+                color: black;
+            }
+
+            th,
+            td {
+                background: white !important;
+                border-color: #ccc;
+            }
+
+            .epic-row td {
+                background: #eee !important;
+            }
+
+            a {
+                color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Jira Parent Ticket Table of Contents</h1>
+        <p class="meta">Workspace: <a href="https://glophics-team-tejd16ze.atlassian.net">Glophics Jira</a> · Retrieved:
+            November 11, 2026</p>
+        <div class="note">GLOP-275 and GU-1 include the epic itself plus tickets assigned to you. GLOP-464 lists all
+            tickets under that epic; its epic entry is shown as a reference.</div>
+
+        <section>
+            <h2>Maintenance Team Requests</h2>
+            <div class='table-wrap'>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Jira Key</th>
+                            <th>Summary / Title</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='epic-row'>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-275'>GLOP-275</a></td>
+                            <td>Glophics Services 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Epic</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-2081'>GLOP-2081</a>
+                            </td>
+                            <td>Search Engine Optimization Enhancements</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-1116'>GLOP-1116</a>
+                            </td>
+                            <td>Glophics Shipping | All Accounts</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-844'>GLOP-844</a></td>
+                            <td>StickerDot | General Requests | 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-521'>GLOP-521</a></td>
+                            <td>StickerMarket | General Requests | 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-440'>GLOP-440</a></td>
+                            <td>Stikchi | General Request | 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-378'>GLOP-378</a></td>
+                            <td>SingaPrinting | General Request | 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-342'>GLOP-342</a></td>
+                            <td>WowPress | All Accounts | January</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-332'>GLOP-332</a></td>
+                            <td>WowPress Requests | All Accounts | 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-324'>GLOP-324</a></td>
+                            <td>OzStickerPrinting | General Request | 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-299'>GLOP-299</a></td>
+                            <td>StickerCanada | General Request | 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-283'>GLOP-283</a></td>
+                            <td>StickerJapan | General Request | 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-278'>GLOP-278</a></td>
+                            <td>AllStickerPrinting | General Request | 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h2>Musticker Team Requests/Updates</h2>
+            <div class='table-wrap'>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Jira Key</th>
+                            <th>Summary / Title</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='epic-row'>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-464'>GLOP-464</a></td>
+                            <td>Musticker Development 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Epic reference</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-1983'>GLOP-1983</a>
+                            </td>
+                            <td>Musticker | Globalization</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-1246'>GLOP-1246</a>
+                            </td>
+                            <td>Musticker | Support</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-1183'>GLOP-1183</a>
+                            </td>
+                            <td>Musticker | Admin | Phase 2 | 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-1182'>GLOP-1182</a>
+                            </td>
+                            <td>Musticker | Storefront | Phase 2 | 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-483'>GLOP-483</a></td>
+                            <td>Musticker | Admin | 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GLOP-465'>GLOP-465</a></td>
+                            <td>Musticker | Storefront | 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h2>UI/UX Team Requests/Updates</h2>
+            <div class='table-wrap'>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Jira Key</th>
+                            <th>Summary / Title</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='epic-row'>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GU-1'>GU-1</a></td>
+                            <td>Glophics UI/UX Request</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Epic</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GU-69'>GU-69</a></td>
+                            <td>Musticker | Admin | UI/UX Request | Phase 2 | 2026</td>
+                            <td class='priority-major'>Major</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GU-68'>GU-68</a></td>
+                            <td>Musticker | Storefront | UI/UX Request | Phase 2 | 2026</td>
+                            <td class='priority-major'>Major</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GU-23'>GU-23</a></td>
+                            <td>Musticker | Admin | UI/UX Request | Phase 1 | 2026</td>
+                            <td class='priority-major'>Major</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GU-9'>GU-9</a></td>
+                            <td>Musticker | Storefront | UI/UX Request | Phase 1 | 2026</td>
+                            <td class='priority-major'>Major</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GU-5'>GU-5</a></td>
+                            <td>Major | UI/UX Request | 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://glophics-team-tejd16ze.atlassian.net/browse/GU-4'>GU-4</a></td>
+                            <td>Minor | UI/UX Request | 2026</td>
+                            <td class='priority-minor'>Minor</td>
+                            <td class='status'>Open</td>
+                            <td>Ticket</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <footer>Dark theme is applied by default for comfortable viewing.</footer>
+    </main>
+</body>
+
+</html>
